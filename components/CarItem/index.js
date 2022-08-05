@@ -4,14 +4,14 @@ import styles from './styles.js';
 import CustomButton from '../CustomButton';
 
 const CarItem = (props) => {
-  const { name, price, imagePath } = props;
+  const { name, tagline, image } = props.car;
 
   return (
     <View style={styles.carContainer}>
-      <ImageBackground style={styles.imageBackground} source={imagePath} />
+      <ImageBackground style={styles.imageBackground} source={image} />
       <View style={styles.titles}>
         <Text style={styles.title}>{name}</Text>
-        <Text style={styles.subTitle}>{price}</Text>
+        <Text style={styles.subTitle}>{tagline}</Text>
       </View>
 
       <View style={styles.buttonContainer}>

@@ -17,8 +17,9 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import CarItem from './components/CarItem';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
+import CarList from './components/CarList';
+import Header from './components/Header';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -36,11 +37,8 @@ const App: () => Node = () => {
         },
       ]}
     >
-      <CarItem
-        name={'Model S'}
-        price={'Starting at $81,000'}
-        imagePath={require('./assets/images/ModelS.jpeg')}
-      />
+      <Header />
+      <CarList />
     </View>
   );
 };
